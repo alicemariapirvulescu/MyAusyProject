@@ -1,7 +1,4 @@
-# MyAusyProject
-This is my final Employees project.
-
-README PIRVULESCU ALICE-MARIA -  MY AUSY PROJECT
+# MyAusyProject - README PIRVULESCU ALICE-MARIA 
 
 "/api/users" mapping necesar pentru toate functiile aplicatiei
 
