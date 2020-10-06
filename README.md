@@ -2,7 +2,7 @@
 
 # Employees Management
 >
-This project is an application that is supposed to offer a solution for managing the employees of a company that is organized in departments and job categories. Using Docker I created a container that holds a database of type PostgreSQL and I implemented the CRUD (Create, Read, Update, Delete) operations in Spring Boot, as for testing I chose to use Postman. I made a lot of practical situation that my project would be helpful as listing all active employees to reach out to them for a meeting or all managers, updating the department or job of an employee and also I made a DTO model as when there are public lists to avoid posting confidential info. Also, all the errors are displayed for example if the date of birth of am employee is before the 1900 or the format is wrong it will display a specific message. For this project, I also used the JPA concepts with Hibernate and SQL for testing and working with the data.
+This project offers a solution for managing the employees of a company that is organized in departments and job categories using HTTP responses. For this application, I’ve implemented the REST operations in Spring Boot and for testing, I chose to use Postman. I’ve made a lot of practical situations as listing all active employees to reach out to them for a meeting or all managers, updating the department or job, a DTO employee model, and also intercepting and treating HTTP Errors.
 <hr>
 
 HOW TO USE MY EMPLOYEES SPRING APPLICATION: You should choose any of those paths
