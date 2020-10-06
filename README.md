@@ -1,93 +1,71 @@
 # MyAusyProject - README PIRVULESCU ALICE-MARIA 
 
-"/api/users" mapping necesar pentru toate functiile aplicatiei
+HOW TO USE MY EMPLOYEES SPRING APPLICATION: You should choose any of those paths
 
-DEPARTMENT ENTITY
+"/ api / users" mapping required for all application functions
 
-"/addDepartment"
-Primeste un departament in forma de json, ii da un id auto incrementat 
-unic si verifica ca numele departamentului sa nu fie gol.
+ENTITY DEPARTMENT
 
-CAZURI AFISARE MESAJE EROARE :
--in cazul in care numele este gol va aparea un mesaj cu status BAD_REQUEST
+"/ addDepartment" Receives a json-shaped department, gives it a unique incremental car id (primary key for departments), and verifies that the department name is not empty.
 
-REZULTAT PENTRU INPUT OKAY: 
--departamentul este adaugat in baza de date si afisat sub forma de json
+CASES OF DISPLAYING ERROR MESSAGES: -if the name is empty a message with BAD_REQUEST status will appear
 
+RESULT FOR INPUT OKAY: -department is added to the database and displayed as json
 
-"/findAllDepartments"
-Returneaza lista de departamente existenta in baza de date.
+"/ findAllDepartments" Returns the list of existing departments in the database.
 
-"/deleteDepartment/{id}"
-Primeste un id de departament ca o variabila de cale, id pe care il cauta in 
-departamente.
+"/ deleteDepartment / {id}" Receives a department id as a path variable, an id it searches for in departments.
 
-CAZURI AFISARE MESAJE EROARE:
-- Atunci cand nu exista departamentul cu id-ul
-cautat va aparea un mesaj de tip http cu status NOT_FOUND si mesajul 
-"Department with this id doesn't exist" alaturi de id-ul cautat.
+CASES OF DISPLAYING ERROR MESSAGES:
 
-REZULTAT PENTRU INPUT OKAY:
--Se va sterge departamentul cu id-ul dorit.
-
+When the department with the searched id does not exist, an http message with the status NOT_FOUND will appear and the message "Department with this id doesn't exist" will appear next to the searched id.
+RESULT FOR OKAY INPUT: -The department with the desired id will be deleted.
 
 JOB CATEGORIES:
 
-"/addJobCategory" primeste o categorie de job in forma de json, ii da un id auto incrementat 
-unic si verifica ca numele categoriei sa nu fie gol.
+"/ addJobCategory" receives a job category in the form of a json, gives it a unique incremental auto id (primary key for jobs) and checks that the category name is not empty.
 
-CAZURI AFISARE MESAJE EROARE :
--in cazul in care numele este gol va aparea un mesaj cu status NO_CONTENT
+CASES OF DISPLAYING ERROR MESSAGES: -if the name is empty a message with NO_CONTENT status will appear
 
-REZULTAT PENTRU INPUT OKAY: 
--Categoria de job este este adaugata in baza de date si afisat sub forma de json
+RESULT FOR OKAY INPUT: -The job category is added to the database and displayed as json
 
-"/getAllJobCategories"
-Returneaza lista de categorii de job din baza de date.
+"/ getAllJobCategories" Returns the list of job categories in the database.
 
-"/deleteJobCategory/{id}"
-Primeste un id de job category ca o variabila de cale, id pe care il cauta in 
-categoriile de joburi.
+"/ deleteJobCategory / {id}" Gets a job category id as a path variable, an id it looks for in job categories.
 
-CAZURI AFISARE MESAJE EROARE:
-- Atunci cand nu exista categoria de job cu id-ul
-cautat va aparea un mesaj de tip http cu status NOT_FOUND si mesajul 
-"Job category whith this id doesn't exist " + id.
+CASES OF DISPLAYING ERROR MESSAGES:
 
-REZULTAT PENTRU INPUT OKAY:
--Se va sterge categoria de job cu id-ul dorit.
-
-
-
+When there is no job category with the searched id, an http message with the status NOT_FOUND will appear and the message "Job category whith this id doesn't exist" + id.
+RESULT FOR OKAY INPUT: -The job category will be deleted with the desired id.
 
 EMPLOYEES:
 
-"/addEmployee"
+"/ AddEmployee" receives an employee in the form of a json with next fields: id(auto incremented, primary ley), firstName, lastName, jobCategoryId(Foregin key), departmentId(Foregin key), an boolean isManager, startDate and EndDate, birthday (all dates), active (boolean), address, CP, telephone, email, noChildren, salary(double), studies(text), socialSecurityNumber and hasDrivingLicense(boolean).
 
-"/findEmployeeById/{id}"
+"/ FindEmployeeById / {id}" returns the 
 
-"/getAllEmployees"
+"/ GetAllEmployees"
 
-"/addEmployee/{id_dep}/{id_job}"
+"/ AddEmployee / {id_dep} / {id_job}" adds the employee in form of a json and sets the department and id_job. If the id_dep or id_job can't be found it displays a specific message.
 
-"/deleteEmployee/{id}"
+"/ DeleteEmployee / {id}"
 
-"/getEmployeeByDepartment/{id}"
+"/ GetEmployeeByDepartment / {id}"
 
-"/getEmployeeByDepAndJob/{id_dep}/{id_job}"
+"/ GetEmployeeByDepAndJob / {id_dep} / {id_job}"
 
-"/updateEmployee/{id}/{id_dep}/{id_job}"
+"/ UpdateEmployee / {id} / {id_dep} / {id_job}"
 
-"/getAllEmployeesDto"
+"/ GetAllEmployeesDto"
 
-"/getAllManagersDto"
+"/ GetAllManagersDto"
 
-"/getAllActiveDto"
+"/ GetAllActiveDto"
 
-"/getAllOrderByFirstName/asc"
+"/ GetAllOrderByFirstName / asc"
 
-"/getAllOrderByFirstName/desc"
+"/ GetAllOrderByFirstName / desc"
 
-"/getAllOrderBySalary/asc"
+"/ GetAllOrderBySalary / asc"
 
-"/getAllOrderBySalary/desc"
+"/ GetAllOrderBySalary / desc"
